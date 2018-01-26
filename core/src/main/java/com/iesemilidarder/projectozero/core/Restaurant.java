@@ -1,5 +1,7 @@
 package com.iesemilidarder.projectozero.core;
 
+import java.util.ArrayList;
+
 public class Restaurant {
     //Objetos privados
     private String name;
@@ -7,6 +9,18 @@ public class Restaurant {
     private String website;
     private String telephone;
     private String type;
+    private String id;
+    private String url_imagen;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
 
     //Get y Set del objeto Name
     public String getName() {
@@ -53,5 +67,29 @@ public class Restaurant {
         this.type = type;
     }
 
+    //get y set de imagen
+    public void setUrl_imagen(String url_imagen) {
+        this.url_imagen = url_imagen;
+    }
+
+    public String getUrl_imagen() {
+        return url_imagen;
+    }
+
+
+    //get y set de opiniones
+    private ArrayList<String> opinions;
+
+    public ArrayList<String> getOpinions() {
+        return opinions;
+    }
+
+    public void setOpinions(ArrayList<String> opinions) {
+        this.opinions = opinions;
+    }
+
+    public Restaurant() {
+        this.opinions = new ArrayList<String>();
+    }
 }
 

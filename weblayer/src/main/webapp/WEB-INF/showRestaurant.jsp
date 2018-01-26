@@ -1,11 +1,17 @@
-<%@ page import="java.lang.String" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="com.iesemilidarder.projectozero.core.Restaurant" %>
 <%@ page import="com.iesemilidarder.projectozero.core.ReadRestaurant" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="com.iesemilidarder.projectozero.core.Restaurant" %>
+
+<%--
+  Created by IntelliJ IDEA.
+  User: cicles
+  Date: 15/1/2018
+  Time: 17:31
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!doctype html>
-<html lang="ca">
+<html>
 <head>
     <title>Restaurants</title>
     <!-- Required meta tags -->
@@ -20,8 +26,6 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-
-<!-- Navigation bar -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="#">Restaurant Show M Da Wei</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,30 +67,24 @@
     <div class="container">
 
         <%
-            ReadRestaurant readRestaurant = new ReadRestaurant();
-            ArrayList al = (ArrayList) readRestaurant.readRestaurants(request.getParameter("buscar"));
-            Iterator itr = al.iterator();
 
-            while(itr.hasNext()) {
-                Restaurant std = (Restaurant) itr.next();
-                out.println("<div class='row'>");
-                out.println("<div class='col-md-4'>" + "<img class='img-fluid' src='" +std.getUrl_imagen() + "'>  </div>");
-                out.println("<div class='col-md-8'>" +
-                        "<h2>" + std.getName() + "</h2>" +
-                        "<p>" + std.getType() + "</p>" +
-                        "<p>" + std.getAddress() + "</p>" +
-                        "<p>" + std.getTelephone() + "</p>" +
-                        "<p>" + std.getWebsite() + "</p>" +
-                        "</div>");
-                out.println("<p> <a class='btn btn-secondary' href='mostrar?id=" +std.getId()+ "'role='button'> Més informació </a> </p>");
-                out.println("</div>");
+            Restaurant restaurant = (Restaurant) request.getAttribute("id");
+
+                out.println("<p>" + "<img class='img-fluid' src='" + restaurant.getUrl_imagen() + "'>"  + "</p>");
+                out.println(
+                        "<p>" + restaurant.getName() + "</p>" +
+                        "<p>" + restaurant.getType() + "</p>" +
+                        "<p>" + restaurant.getAddress() + "</p>" +
+                        "<p>" + restaurant.getTelephone() + "</p>" +
+                        "<p>" + restaurant.getWebsite() + "</p>"
+                );
+
+            for (String opinion :restaurant.getOpinions()) {
+                    out.println("<p>" + opinion + "</p>");
             }
         %>
-
         <hr>
-
     </div> <!-- /container -->
-
 </main>
 
 <footer class="container">
