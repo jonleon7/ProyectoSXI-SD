@@ -64,7 +64,7 @@
 
         <%
             ReadRestaurant readRestaurant = new ReadRestaurant();
-            ArrayList al = (ArrayList) readRestaurant.readRestaurants(request.getParameter("buscar"));
+            ArrayList al = readRestaurant.readRestaurants(request.getParameter("buscar"));
             Iterator itr = al.iterator();
 
             while(itr.hasNext()) {

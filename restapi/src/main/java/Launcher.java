@@ -95,7 +95,7 @@ public class Launcher {
             return user;
         }, new JsonTransformer());
         //biconditional response way2: via jackson
-        get("/users", (request, response) -> {
+        /*get("/users", (request, response) -> {
             if (shouldReturnHtml(request)) {
                 Map<String, Object> model = new HashMap<>();
                 model.put("posts", lUser);
@@ -110,7 +110,7 @@ public class Launcher {
                 setResponseHeader(response, false);
                 return mapper.writeValueAsString(lUser);
             }
-        });
+        });*/
 
         get("/users", (request, response) -> {
             if (shouldReturnHtml(request)) {

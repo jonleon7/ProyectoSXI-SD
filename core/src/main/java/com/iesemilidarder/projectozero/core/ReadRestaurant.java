@@ -6,12 +6,11 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class ReadRestaurant {
     //ArrayList para leer restaurantes
-    public static List<Restaurant> readRestaurants(String buscar) {
+    public static ArrayList readRestaurants(String buscar) {
         ArrayList al = new ArrayList();
         try {
             //Ponemos que usamos base de datos Oracle

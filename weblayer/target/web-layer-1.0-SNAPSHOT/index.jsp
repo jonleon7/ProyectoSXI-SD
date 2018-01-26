@@ -23,7 +23,7 @@
 
 <!-- Navigation bar -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Restaurants</a>
+    <a class="navbar-brand" href="#">Restaurant Show M Da Wei</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,12 +33,14 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Inici <span class="sr-only">(current)</span></a>
             </li>
+            <!--
             <li class="nav-item">
                 <a class="nav-link" href="test">Enllaç 1</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="test">Enllaç 2</a>
             </li>
+            -->
         </ul>
         <form class="form-inline my-2 my-lg-0" action="index.jsp">
             <input class="form-control mr-sm-2" type="text" placeholder="buscar" aria-label="buscar" name="buscar">
@@ -52,34 +54,34 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="test" role="button">Learn more &raquo;</a></p>
+            <h1 class="display-3">Restaurants Show M Da wei</h1>
+            <p>U dont know the way? Dont worry, I show u da wei</p>
+            <!--  <p><a class="btn btn-primary btn-lg" href="test" role="button">Learn more &raquo;</a></p> -->
         </div>
     </div>
 
     <div class="container">
 
-            <%
-                ReadRestaurant readRestaurant = new ReadRestaurant();
-                ArrayList al = (ArrayList) readRestaurant.readRestaurants(request.getParameter("buscar"));
-                Iterator itr = al.iterator();
+        <%
+            ReadRestaurant readRestaurant = new ReadRestaurant();
+            ArrayList al = readRestaurant.readRestaurants(request.getParameter("buscar"));
+            Iterator itr = al.iterator();
 
-                while(itr.hasNext()) {
-                    Restaurant std = (Restaurant) itr.next();
-                    out.println("<div class='row'>");
-                    out.println("<div class='col-md-4'>" + "<img class='img-fluid' src='img/empty.png'>" + "</div>");
-                    out.println("<div class='col-md-8'>" +
-                            "<h2>" + std.getName() + "</h2>" +
-                            "<p>" + std.getType() + "</p>" +
-                            "<p>" + std.getAddress() + "</p>" +
-                            "<p>" + std.getTelephone() + "</p>" +
-                            "<p>" + std.getWebsite() + "</p>" +
-                            "</div>");
-                    out.println("<p> <a class='btn btn-secondary' href='test' role='button'> Més informació </a> </p>");
-                    out.println("</div>");
-                }
-            %>
+            while(itr.hasNext()) {
+                Restaurant std = (Restaurant) itr.next();
+                out.println("<div class='row'>");
+                out.println("<div class='col-md-4'>" + "<img class='img-fluid' src='" +std.getUrl_imagen() + "'>  </div>");
+                out.println("<div class='col-md-8'>" +
+                        "<h2>" + std.getName() + "</h2>" +
+                        "<p>" + std.getType() + "</p>" +
+                        "<p>" + std.getAddress() + "</p>" +
+                        "<p>" + std.getTelephone() + "</p>" +
+                        "<p>" + std.getWebsite() + "</p>" +
+                        "</div>");
+                out.println("<p> <a class='btn btn-secondary' href='mostrar?id=" +std.getId()+ "'role='button'> Més informació </a> </p>");
+                out.println("</div>");
+            }
+        %>
 
         <hr>
 

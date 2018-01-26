@@ -9,13 +9,20 @@
   <welcome-file-list>
     <welcome-file>/index.jsp</welcome-file>
   </welcome-file-list>
-
   <servlet>
     <servlet-name>TestServlet</servlet-name>
     <servlet-class>com.iesemilidarder.projectozero.web.TestServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowRestaurantServlet</servlet-name>
+    <servlet-class>com.iesemilidarder.projectozero.web.ShowRestaurantServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>TestServlet</servlet-name>
     <url-pattern>/test</url-pattern>
   </servlet-mapping>
-  </web-app>
+  <servlet-mapping>
+    <servlet-name>ShowRestaurantServlet</servlet-name>
+    <url-pattern>/mostrar</url-pattern>
+  </servlet-mapping>
+</web-app>
