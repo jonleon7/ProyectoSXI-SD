@@ -23,9 +23,9 @@
         </plugins>
     </build>
     <modules>
-        <module>web-layer</module>
+        <module>weblayer</module>
         <module>core</module>
-        <module>rest-api</module>
+        <module>restapi</module>
         <!--module>scrapping</module-->
     </modules>
 
