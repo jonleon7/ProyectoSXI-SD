@@ -95,7 +95,7 @@ public class Launcher {
             return user;
         }, new JsonTransformer());
         //biconditional response way2: via jackson
-        /*get("/users", (request, response) -> {
+        get("/users", (request, response) -> {
             if (shouldReturnHtml(request)) {
                 Map<String, Object> model = new HashMap<>();
                 model.put("posts", lUser);
@@ -110,14 +110,14 @@ public class Launcher {
                 setResponseHeader(response, false);
                 return mapper.writeValueAsString(lUser);
             }
-        });*/
+        });
 
-        get("/users", (request, response) -> {
+        get("/restaurantes", (request, response) -> {
             if (shouldReturnHtml(request)) {
                 Map<String, Object> model = new HashMap<>();
                 model.put("posts", ReadRestaurant.readRestaurants(""));
-                model.put("title", "Usuarios");
-                model.put("subtitle", "Lista de usuarios");
+                model.put("title", "Restaurantes");
+                model.put("subtitle", "Lista de restaurantes");
                 return getFreemarkerEngine().render(
                         new ModelAndView(model, "basicView.ftl")
                 );
