@@ -72,7 +72,6 @@ public class Launcher {
             return new FreeMarkerEngine();
         }
     }
-
     public static void main(String... args) {
         staticFiles.location("/public");
         init();
@@ -111,7 +110,6 @@ public class Launcher {
                 return mapper.writeValueAsString(lUser);
             }
         });
-
         get("/restaurantes", (request, response) -> {
             if (shouldReturnHtml(request)) {
                 Map<String, Object> model = new HashMap<>();
@@ -128,7 +126,6 @@ public class Launcher {
                 return mapper.writeValueAsString(ReadRestaurant.readRestaurants(""));
             }
         });
-
         /*get("/scrap",(request,response)->{
             Map<String, Object> model = new HashMap<>();
             String query = ".center-content";
@@ -143,5 +140,4 @@ public class Launcher {
             );
         });*/
     }
-
 }
