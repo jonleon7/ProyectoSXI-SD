@@ -1,8 +1,8 @@
 <%@ page import="java.lang.String" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.iesemilidarder.projectozero.core.ReadRestaurant" %>
+<%@ page import="com.iesemilidarder.projectozero.core.base.ReadRestaurant" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="com.iesemilidarder.projectozero.core.Restaurant" %>
+<%@ page import="com.iesemilidarder.projectozero.core.dao.Restaurant" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="ca">

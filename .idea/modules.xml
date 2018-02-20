@@ -4,9 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/plantillaSAD.iml" filepath="$PROJECT_DIR$/.idea/plantillaSAD.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springrestsecure/rest-spring-secure.iml" filepath="$PROJECT_DIR$/springrestsecure/rest-spring-secure.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springrestsecure/rest-spring-secure-core/rest-spring-secure-core.iml" filepath="$PROJECT_DIR$/springrestsecure/rest-spring-secure-core/rest-spring-secure-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springrestsecure/rest-spring-secure-front/rest-spring-secure-front.iml" filepath="$PROJECT_DIR$/springrestsecure/rest-spring-secure-front/rest-spring-secure-front.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springrest/rest-spring.iml" filepath="$PROJECT_DIR$/springrest/rest-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springrest/rest-spring-core/rest-spring-core.iml" filepath="$PROJECT_DIR$/springrest/rest-spring-core/rest-spring-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springrest/rest-spring-front/rest-spring-front.iml" filepath="$PROJECT_DIR$/springrest/rest-spring-front/rest-spring-front.iml" />
       <module fileurl="file://$PROJECT_DIR$/weblayer/web-layer.iml" filepath="$PROJECT_DIR$/weblayer/web-layer.iml" />
     </modules>
   </component>

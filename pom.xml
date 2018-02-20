@@ -25,7 +25,7 @@
     <modules>
         <module>weblayer</module>
         <module>core</module>
-        <module>springrestsecure</module>
+        <module>springrest</module>
         <!--module>scrapping</module-->
     </modules>
 
@@ -40,6 +40,11 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.7</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.3</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

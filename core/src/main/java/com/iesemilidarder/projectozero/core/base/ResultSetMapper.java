@@ -1,9 +1,11 @@
 package com.iesemilidarder.projectozero.core.base;
 
+import org.apache.commons.beanutils.BeanUtils;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
