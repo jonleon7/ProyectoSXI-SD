@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/plantillaSAD.iml" filepath="$PROJECT_DIR$/.idea/plantillaSAD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springrestsecure/rest-spring-secure.iml" filepath="$PROJECT_DIR$/springrestsecure/rest-spring-secure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springrestsecure/rest-spring-secure-core/rest-spring-secure-core.iml" filepath="$PROJECT_DIR$/springrestsecure/rest-spring-secure-core/rest-spring-secure-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springrestsecure/rest-spring-secure-front/rest-spring-secure-front.iml" filepath="$PROJECT_DIR$/springrestsecure/rest-spring-secure-front/rest-spring-secure-front.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weblayer/web-layer.iml" filepath="$PROJECT_DIR$/weblayer/web-layer.iml" />
+    </modules>
+  </component>
+</project>

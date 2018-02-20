@@ -1,6 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.iesemilidarder.projectozero.core.Restaurant" %>
-<%@ page import="com.iesemilidarder.projectozero.core.ReadRestaurant" %>
+<%@ page import="com.iesemilidarder.projectozero.core.dao.Restaurant" %>
+<%@ page import="com.iesemilidarder.projectozero.core.base.ReadRestaurant" %>
 <%@ page import="java.util.Iterator" %>
 
 <%--

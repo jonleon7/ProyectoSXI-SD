@@ -1,7 +1,7 @@
 package com.iesemilidarder.projectozero.web;
 
 import com.sun.org.apache.regexp.internal.RE;
-import com.iesemilidarder.projectozero.core.ReadRestaurant;
+import com.iesemilidarder.projectozero.core.base.ReadRestaurant;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
