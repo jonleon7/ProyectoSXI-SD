@@ -25,7 +25,7 @@
     <modules>
         <module>weblayer</module>
         <module>core</module>
-        <module>restapi</module>
+        <module>springrestsecure</module>
         <!--module>scrapping</module-->
     </modules>
 
