@@ -67,12 +67,9 @@ public class ResultSetMapper<T> {
             e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
         return outputList;
-    }
-
-    private static class BeanUtils {
-        public static <T> void setProperty(T bean, String name, Object columnValue) {
-        }
     }
 }
