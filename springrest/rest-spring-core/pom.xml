@@ -13,10 +13,18 @@
     <!-- dependecia para la libreria de java que usamos-->
     <dependencies>
         <dependency>
-            <groupId>com.oracle.jdbc</groupId>
-            <artifactId>ojdbc8</artifactId>
-            <version>12.2.0.1</version>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
         </dependency>
+        <!-- Dependencia para controlar la persistencia y el mapeo objeto/relacioanl -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+
     </dependencies>
 
     <profiles>
@@ -30,10 +38,10 @@
                         <version>2.5.2</version>
                         <configuration>
                             <groupId>com.oracle</groupId>
-                            <artifactId>ojdbc8</artifactId>
-                            <version>12.2.0.1</version>
+                            <artifactId>ojdbc6</artifactId>
+                            <version>11.2.0.3</version>
                             <packaging>jar</packaging>
-                            <file>ojdbc8.jar</file>
+                            <file>ojdbc6-11.2.0.3.jar</file>
                             <generatePom>true</generatePom>
                         </configuration>
                         <executions>
@@ -50,4 +58,34 @@
             </build>
         </profile>
     </profiles>
+
+    <build>
+        <plugins>
+            <!-- any other plugins -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

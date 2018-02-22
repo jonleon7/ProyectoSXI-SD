@@ -9,9 +9,10 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/core/pom.xml" />
         <option value="$PROJECT_DIR$/springrestsecure/pom.xml" />
         <option value="$PROJECT_DIR$/springrest/pom.xml" />
+        <option value="$PROJECT_DIR$/springrest/rest-spring-core/pom.xml" />
+        <option value="$PROJECT_DIR$/springrest/rest-spring-front/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
