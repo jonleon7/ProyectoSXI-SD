@@ -1,9 +1,10 @@
 package com.learningjava.rest.spring.front.controller;
 
-import com.learningjava.rest.spring.core.Greeting;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import com.iesemilidarder.projectozero.core.base.ReadRestaurant;
+import com.iesemilidarder.projectozero.core.dao.Restaurant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,16 +18,10 @@ import java.util.List;
 public class HomeController {
     @RequestMapping("/")
     public String index(Model model) {
-        String name = "Pepito";
-        List<Greeting> arrData = new ArrayList<>();
-        for (int i=0;i<9;i++){
-            arrData.add(new Greeting(i,String.format("John Doe%s", i)));
-        }
-        //List<Restaurants> arrData2 = ReadDB.getAll();
-        model.addAttribute("name",name);
-        model.addAttribute("list",arrData);
-        //model.addAttribute("restaurantes",ReadDB.getAll());
-        //model.addAttribute("db",ReadDB);
+        System.out.println("llego");
+        ReadRestaurant rd = new ReadRestaurant();
+        List<Restaurant> data = rd.readRestaurants("");
+        model.addAttribute("restaurantes",data);
         return "index";
     }
 }
