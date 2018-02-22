@@ -35,7 +35,6 @@
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.27-incubating" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
-          <element id="library" level="project" name="Maven: com.learningjava.rest.spring:rest-spring-core:1.0-SNAPSHOT" />
           <element id="archive" name="core-1.0-SNAPSHOT.jar">
             <element id="module-output" name="core" />
           </element>
@@ -45,6 +44,9 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.3" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
+          <element id="archive" name="rest-spring-core-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="rest-spring-core" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">

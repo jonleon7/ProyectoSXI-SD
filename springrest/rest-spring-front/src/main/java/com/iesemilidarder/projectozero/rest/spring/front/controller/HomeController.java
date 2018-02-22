@@ -1,4 +1,4 @@
-package com.learningjava.rest.spring.front.controller;
+package com.iesemilidarder.projectozero.rest.spring.front.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,11 +9,7 @@ import com.iesemilidarder.projectozero.core.dao.Restaurant;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * com.learningjava.rest.spring.front
- * Class
- * By berto. 12/02/2018
- */
+
 @Controller
 public class HomeController {
     @RequestMapping("/")

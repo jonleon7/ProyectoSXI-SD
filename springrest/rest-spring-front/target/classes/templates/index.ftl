@@ -6,15 +6,14 @@
 </head>
 <body>
 Spring rocks the web
-<#if name??>
-<h1>Hola ${name!"yuhu"}</h1>
+<div>
+<#if restaurantes??>
+    <ul>
+        <#list restaurantes as item>
+            <li>${item.nom!""}</li>
+        </#list>
+    </ul>
 </#if>
-<#if list??>
-<ul>
-    <#list list as item>
-        <li>${item.content!""}</li>
-    </#list>
-</ul>
-</#if>
+</div>
 </body>
 </html>

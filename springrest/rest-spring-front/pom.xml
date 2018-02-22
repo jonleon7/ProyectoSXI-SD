@@ -37,13 +37,13 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.learningjava.rest.spring</groupId>
-            <artifactId>rest-spring-core</artifactId>
+            <groupId>projectzero</groupId>
+            <artifactId>core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>projectzero</groupId>
-            <artifactId>core</artifactId>
+            <artifactId>rest-spring-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

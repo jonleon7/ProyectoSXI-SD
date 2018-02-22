@@ -1,4 +1,4 @@
-package com.learningjava.rest.spring.core;
+package com.iesemilidarder.projectozero.rest.spring.core;
 /**
  * com.learningjava.rest.spring.front
  * Class
