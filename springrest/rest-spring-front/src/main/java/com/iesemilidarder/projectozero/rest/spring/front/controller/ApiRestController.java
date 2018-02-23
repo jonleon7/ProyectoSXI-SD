@@ -19,7 +19,7 @@ public class ApiRestController {
 
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping(path = "/restaurantes",method = RequestMethod.GET)
+    @RequestMapping(path = "/restaurants",method = RequestMethod.GET)
     public List<Restaurant> listaRestaurants() {
         ReadRestaurant readRestaurant = new ReadRestaurant();
         return readRestaurant.readRestaurants("");

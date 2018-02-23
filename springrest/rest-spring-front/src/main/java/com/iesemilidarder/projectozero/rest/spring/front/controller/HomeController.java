@@ -21,11 +21,11 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping(value = "/restaurantes", method = RequestMethod.GET)
+    @RequestMapping(value = "/restaurants", method = RequestMethod.GET)
     public String init(@ModelAttribute("model") ModelMap model) {
         ReadRestaurant readRestaurant = new ReadRestaurant();
         List<Restaurant> data = readRestaurant.readRestaurants("");
-        model.addAttribute("restaurantes", data);
-        return "restaurantes";
+        model.addAttribute("restaurants", data);
+        return "restaurants";
     }
 }

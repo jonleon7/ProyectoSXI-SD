@@ -17,7 +17,7 @@
 
 <!-- Navigation bar -->
 <nav class="navbar navbar-expand-md navbar-white fixed-top bg-dark">
-    <a class="navbar-brand" href="index.jsp">Restaurant Show M Da Wei</a>
+    <a class="navbar-brand" href="index.ftl">Restaurant Show M Da Wei</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,12 +25,12 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault" >
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index.jsp">Inici <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.ftl">Inici <span class="sr-only">(current)</span></a>
             </li>
         </ul>
 
         <!--Boton de busqueda-->
-        <form class="form-inline my-2 my-lg-0" action="index.jsp">
+        <form class="form-inline my-2 my-lg-0" action="index.ftl">
             <input class="form-control mr-sm-2" type="text" placeholder="buscar" aria-label="buscar" name="buscar">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
         </form>
@@ -49,13 +49,13 @@
 
     <div class="container">
         <div>
-            <form action="/restaurantes">
+            <form action="/restaurants">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Resultado en FTL</button>
             </form>
         </div>
 
         <div>
-            <form action="/rest/api/restaurantes">
+            <form action="/rest/api/restaurants">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Resultado en JSON</button>
             </form>
         </div>

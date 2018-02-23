@@ -16,7 +16,7 @@
 <body>
 <!-- Navigation bar -->
 <nav class="navbar navbar-expand-md navbar-white fixed-top bg-dark">
-    <a class="navbar-brand" href="index.jsp">Restaurant Show M Da Wei</a>
+    <a class="navbar-brand" href="index.ftl">Restaurant Show M Da Wei</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,12 +24,12 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault" >
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index.jsp">Inici <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.ftl">Inici <span class="sr-only">(current)</span></a>
             </li>
         </ul>
 
         <!--Boton de busqueda-->
-        <form class="form-inline my-2 my-lg-0" action="index.jsp">
+        <form class="form-inline my-2 my-lg-0" action="index.ftl">
             <input class="form-control mr-sm-2" type="text" placeholder="buscar" aria-label="buscar" name="buscar">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
         </form>
@@ -51,7 +51,7 @@
     <div class="container">
         <!-- mostramos el restaurante con su ID y las opiniones de los usuarios -->
 
-        <table width="100%"class="nombre">
+        <table width="100%" class="nombre">
             <tr>
                 <th>Tipo</th>
                 <th>Nombre</th>
@@ -69,7 +69,7 @@
             <script>
                 $(document).ready(function () {
                     console.log($("#myTitle").html());
-                    $.get("/rest/api/restaurantes", function (data) {
+                    $.get("/rest/api/restaurants", function (data) {
                         console.log(data);
                         var contentHtml = "<h2>Nombre</h2>";
                         $.each(data, function( index, value ) {
