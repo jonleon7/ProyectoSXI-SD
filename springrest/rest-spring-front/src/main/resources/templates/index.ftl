@@ -47,15 +47,19 @@
         </div>
     </div>
 
-<div>
-<#if restaurantes??>
-    <ul>
-        <#list restaurantes as item>
-            <li>${item.nom!""}</li>
-        </#list>
-    </ul>
-</#if>
-</div>
+    <div class="container">
+        <div>
+            <form action="/restaurantes">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Resultado en FTL</button>
+            </form>
+        </div>
+
+        <div>
+            <form action="/rest/api/restaurantes">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Resultado en JSON</button>
+            </form>
+        </div>
+    </div>
 </main>
 
 <footer class="container">

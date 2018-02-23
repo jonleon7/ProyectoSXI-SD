@@ -16,36 +16,45 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<nav role="navigation">
-    <ul>
-        <li><a href="/">Home</a></li>
-    </ul>
-</nav>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.ftl">Restaurantes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
 
-<h1>Log in</h1>
+    <main role="main">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Login de la pagina</h1>
+                <p>Haz login para acceder al resultado deseado</p>
+            </div>
+        </div>
 
-<p>You can use: demo@localhost / demo</p>
+        <div class="container">
 
-<form role="form" action="/login" method="post">
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <form role="form" action="/login" method="post">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
-    <div>
-        <label for="username">Name</label>
-        <input name="username" id="username" required autofocus/>
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required/>
-    </div>
-    <div>
-        <label for="remember-me">Remember me</label>
-        <input type="checkbox" name="remember-me" id="remember-me"/>
-    </div>
-    <button type="submit">Sign in</button>
-</form>
+                <div>
+                    <label for="username">Nombre de usuario</label>
+                    <input class="form-control mr-sm-2" name="username" id="username" required autofocus/>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input class="form-control mr-sm-2" type="password" name="password" id="password" required/>
+                </div>
+                <div>
+                    <label for="remember-me">Recordarme</label>
+                    <input type="checkbox" name="remember-me" id="remember-me"/>
+                </div>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</button>
+            </form>
+        </div>
 
-<#if error.isPresent()>
-<p>The email or password you have entered is invalid, try again.</p>
-</#if>
+    <#if error.isPresent()>
+        <p>The username or password you have entered is invalid, try again.</p>
+    </#if>
+    </main>
 </body>
 </html>

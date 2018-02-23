@@ -17,7 +17,7 @@ import java.util.List;
 public class HomeController {
     @RequestMapping("/")
     public String index(Model model) {
-        System.out.println("Cargando de datos completado");
+        System.out.println("Cargado de datos completado");
         return "index";
     }
 
