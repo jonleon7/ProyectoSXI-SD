@@ -10,8 +10,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <!-- Navigation bar -->
@@ -48,10 +46,9 @@
         </div>
     </div>
 
-    <div class="container">
         <!-- mostramos el restaurante con su ID y las opiniones de los usuarios -->
 
-        <table width="100%" class="nombre">
+        <table width="100%" class="table table-striped">
             <tr>
                 <th>Tipo</th>
                 <th>Nombre</th>
@@ -59,7 +56,9 @@
                 <th>Telefono</th>
             </tr>
         </table>
-        <script
+        </main>
+
+        <script>
                 src="http://code.jquery.com/jquery-3.3.1.min.js"
                 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                 crossorigin="anonymous">
@@ -87,8 +86,7 @@
                 });
             </script>
         <hr>
-    </div> <!-- /container -->
-</main>
+
 <footer class="container">
     <p>&copy; Jonathan De León Sola 2017</p>
 </footer>
